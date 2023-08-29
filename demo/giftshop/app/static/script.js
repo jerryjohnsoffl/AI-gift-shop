@@ -37,15 +37,35 @@ function getStoredTheme() {
 function setTheme(theme) {
     const body = document.body;
     body.classList.remove('theme-light', 'theme-dark');
+    const text = document.querySelector(".lead");
+    const label = document.querySelectorAll(".form-label");
+    const container = document.querySelector('.container');
+    const priceInfo = document.querySelectorAll('.product-info p');
 
     if (theme === 'auto') {
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            document.documentElement.setAttribute('data-bs-theme', 'dark')
+            document.documentElement.setAttribute('data-bs-theme', 'dark');
+            text.style.color = "var(--text-color-dark)";
+            container.style.backgroundColor = "var(--bg-color-dark)";
+            label.forEach((el) => el.style.color = "var(--text-color-dark)");
+            priceInfo.forEach((el) => el.style.color = "var(--text-color-dark)");
         } else {
             document.documentElement.setAttribute('data-bs-theme', theme)
         }
     } else {
         document.documentElement.setAttribute('data-bs-theme', theme)
+    }
+    if (theme === 'dark') {
+        text.style.color = "var(--text-color-dark)"
+        container.style.backgroundColor = "var(--bg-color-dark)"
+        label.forEach((el) => el.style.color = "var(--text-color-dark)")
+        priceInfo.forEach((el) => el.style.color = "var(--text-color-dark)")
+    }
+    if (theme === 'light') {
+        text.style.color = "var(--text-color-light)"
+        container.style.backgroundColor = "#fff"
+        label.forEach((el) => el.style.color = "var(--text-color-light)")
+        priceInfo.forEach((el) => el.style.color = "var(--text-color-light)")
     }
 
     localStorage.setItem('theme', theme);

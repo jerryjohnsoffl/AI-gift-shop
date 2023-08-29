@@ -1,3 +1,21 @@
+
+
+:root {
+    --text-color-light: #464646;
+    --text-color-dark: #adb5bd;
+    --bg-color-dark: #343a40;
+    --text-size: .9rem;
+    --text-weight: 400;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;
