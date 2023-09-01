@@ -21,34 +21,83 @@
             <li><button type="button" class="dropdown-item active" data-bs-theme-value="auto"><i class="fa fa-adjust" aria-hidden="true"></i> Auto</button></li>
         </ul>
     </div>
-    <div class="container">
-        <main>
+    <main>
+        <div class="container-fluid">
             <div class="pt-5 text-center">
                 <h2>Gift Guide - Results</h2>
                 <p class="lead">Here are the AI curated gift ideas based on your inputs:</p>
             </div>
-            <div class="row g-5">
+            <div class="row m-3 g-5">
                 {% for gift in gifts %}
-                <div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
+                <div class="px-4 col-12 d-flex align-items-stretch justify-content-start">
                     <div class="product d-flex flex-column">
                         <img class="product-img" src="{{ gift.thumbnail }}" alt="{{ gift.title }}">
                         <div class="product-info d-flex flex-column">
-                            <h4 class="mb-2">{{ gift.title }}</h4>
-                            <h6 class="mb-2 text-muted"><i class="fa fa-tag"></i> Price: {{ gift.price }}</h6>
-                            <p class="mb-1 small"><i class="fa fa-history"></i> Previous Price: {{ gift.old_price }}</p>
-                            <p class="mb-1"><i class="fa fa-refresh"></i> Condition: {{ gift.second_hand_condition }}</p>
-                            <p class="mb-1"><i class="fa fa-star"></i> Rating: {{ gift.rating }} / 5</p>
-                            <p class="mb-1 small"><i class="fa fa-comment"></i> Reviews: {{ gift.reviews }}</p>
-                            <p class="mb-1 small"><i class="fa fa-building"></i> Store Rating: {{ gift.store_rating }} / 5</p>
-                            <p class="mb-1 small"><i class="fa fa-users"></i> Store Reviews: {{ gift.store_reviews }}</p>
-                            <p class="mb-1 small"><i class="fa fa-exchange"></i> Number of Comparisons: {{ gift.number_of_comparisons }}</p>
+                            <h4 class="my-2">{{ gift.title }}</h4>
+                            <h6 class="my-2 text-muted"><i class="fa fa-tag"></i> Price: {{ gift.price }}</h6>
+                            <p class="my-1 small"><i class="fa fa-history"></i> Previous Price: {{ gift.old_price }}</p>
+                            <p class="my-1"><i class="fa fa-refresh"></i> Condition: {{ gift.second_hand_condition }}</p>
+                            <p class="my-1"><i class="fa fa-star"></i> Rating: {{ gift.rating }} / 5</p>
+                            <p class="my-1 small"><i class="fa fa-comment"></i> Reviews: {{ gift.reviews }}</p>
+                            <p class="my-1 small"><i class="fa fa-building"></i> Store Rating: {{ gift.store_rating }} / 5</p>
+                            <p class="my-1 small"><i class="fa fa-users"></i> Store Reviews: {{ gift.store_reviews }}</p>
+                            <p class="my-1 small"><i class="fa fa-exchange"></i> Number of Comparisons: {{ gift.number_of_comparisons }}</p>
                             <p class="mt-3 mb-3"><i class="fa fa-info-circle"></i> Description: {{ gift.snippet }}</p>
-                            <a href="{{ gift.link }}" class="btn btn-primary mt-auto"><i class="fa fa-shopping-cart"></i> Buy Now</a>
+                            <a href="{{ gift.link }}" class="btn btn-submit mt-auto"><i class="fa fa-shopping-cart"></i> Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="product d-flex flex-column">
+                        <img class="product-img" src="{{ gift.thumbnail }}" alt="{{ gift.title }}">
+                        <div class="product-info d-flex flex-column">
+                            <h4 class="my-2">{{ gift.title }}</h4>
+                            <h6 class="my-2 text-muted"><i class="fa fa-tag"></i> Price: {{ gift.price }}</h6>
+                            <p class="my-1 small"><i class="fa fa-history"></i> Previous Price: {{ gift.old_price }}</p>
+                            <p class="my-1"><i class="fa fa-refresh"></i> Condition: {{ gift.second_hand_condition }}</p>
+                            <p class="my-1"><i class="fa fa-star"></i> Rating: {{ gift.rating }} / 5</p>
+                            <p class="my-1 small"><i class="fa fa-comment"></i> Reviews: {{ gift.reviews }}</p>
+                            <p class="my-1 small"><i class="fa fa-building"></i> Store Rating: {{ gift.store_rating }} / 5</p>
+                            <p class="my-1 small"><i class="fa fa-users"></i> Store Reviews: {{ gift.store_reviews }}</p>
+                            <p class="my-1 small"><i class="fa fa-exchange"></i> Number of Comparisons: {{ gift.number_of_comparisons }}</p>
+                            <p class="mt-3 mb-3"><i class="fa fa-info-circle"></i> Description: {{ gift.snippet }}</p>
+                            <a href="{{ gift.link }}" class="btn btn-submit mt-auto"><i class="fa fa-shopping-cart"></i> Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="product d-flex flex-column">
+                        <img class="product-img" src="{{ gift.thumbnail }}" alt="{{ gift.title }}">
+                        <div class="product-info d-flex flex-column">
+                            <h4 class="my-2">{{ gift.title }}</h4>
+                            <h6 class="my-2 text-muted"><i class="fa fa-tag"></i> Price: {{ gift.price }}</h6>
+                            <p class="my-1 small"><i class="fa fa-history"></i> Previous Price: {{ gift.old_price }}</p>
+                            <p class="my-1"><i class="fa fa-refresh"></i> Condition: {{ gift.second_hand_condition }}</p>
+                            <p class="my-1"><i class="fa fa-star"></i> Rating: {{ gift.rating }} / 5</p>
+                            <p class="my-1 small"><i class="fa fa-comment"></i> Reviews: {{ gift.reviews }}</p>
+                            <p class="my-1 small"><i class="fa fa-building"></i> Store Rating: {{ gift.store_rating }} / 5</p>
+                            <p class="my-1 small"><i class="fa fa-users"></i> Store Reviews: {{ gift.store_reviews }}</p>
+                            <p class="my-1 small"><i class="fa fa-exchange"></i> Number of Comparisons: {{ gift.number_of_comparisons }}</p>
+                            <p class="mt-3 mb-3"><i class="fa fa-info-circle"></i> Description: {{ gift.snippet }}</p>
+                            <a href="{{ gift.link }}" class="btn btn-submit mt-auto"><i class="fa fa-shopping-cart"></i> Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="product d-flex flex-column">
+                        <img class="product-img" src="{{ gift.thumbnail }}" alt="{{ gift.title }}">
+                        <div class="product-info d-flex flex-column">
+                            <h4 class="my-2">{{ gift.title }}</h4>
+                            <h6 class="my-2 text-muted"><i class="fa fa-tag"></i> Price: {{ gift.price }}</h6>
+                            <p class="my-1 small"><i class="fa fa-history"></i> Previous Price: {{ gift.old_price }}</p>
+                            <p class="my-1"><i class="fa fa-refresh"></i> Condition: {{ gift.second_hand_condition }}</p>
+                            <p class="my-1"><i class="fa fa-star"></i> Rating: {{ gift.rating }} / 5</p>
+                            <p class="my-1 small"><i class="fa fa-comment"></i> Reviews: {{ gift.reviews }}</p>
+                            <p class="my-1 small"><i class="fa fa-building"></i> Store Rating: {{ gift.store_rating }} / 5</p>
+                            <p class="my-1 small"><i class="fa fa-users"></i> Store Reviews: {{ gift.store_reviews }}</p>
+                            <p class="my-1 small"><i class="fa fa-exchange"></i> Number of Comparisons: {{ gift.number_of_comparisons }}</p>
+                            <p class="mt-3 mb-3"><i class="fa fa-info-circle"></i> Description: {{ gift.snippet }}</p>
+                            <a href="{{ gift.link }}" class="btn btn-submit mt-auto"><i class="fa fa-shopping-cart"></i> Buy Now</a>
                         </div>
                     </div>
                 </div>
                 {% endfor %}
             </div>
+        </div>
         </main>
         <footer class="my-5 pt-5 text-body-secondary text-center text-small">
             <p class="mb-1">&copy; 2017–2023 Company Name</p>
